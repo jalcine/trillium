@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["trillium_testing"] = [{"text":"impl <a class=\"trait\" href=\"trillium_testing/trait.AsyncRead.html\" title=\"trait trillium_testing::AsyncRead\">AsyncRead</a> for <a class=\"struct\" href=\"trillium_testing/struct.TestTransport.html\" title=\"struct trillium_testing::TestTransport\">TestTransport</a>","synthetic":false,"types":["trillium_testing::test_transport::TestTransport"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["run","Runs a trillium handler in a sync context"],["run_async","Runs a trillium handler on an already-running tokio runtime"]],"trait":[["LambdaConnExt","Provides access to the aws lambda context for [`trillium::Conn`]."]]});

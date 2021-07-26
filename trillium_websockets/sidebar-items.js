@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Error","Possible WebSocket errors."],["Message","An enum representing the various forms of a WebSocket message."]],"struct":[["WebSocket","The trillium handler. See crate-level docs for example usage."],["WebSocketConn","A struct that represents an specific websocket connection."]],"type":[["Result","a Result type for websocket messages"]]});

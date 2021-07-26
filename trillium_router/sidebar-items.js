@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["routes","The routes macro represents an experimental macro for defining routers."]],"struct":[["Router","The Router handler"],["RouterRef","A `&mut Router` for use with `Router::build`"]],"trait":[["RouterConnExt","Extends trillium::Conn with accessors for router params."]]});

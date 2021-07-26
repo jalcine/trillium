@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["StaticCompiledHandler","The static compiled handler which contains the compile-time loaded assets"]]});

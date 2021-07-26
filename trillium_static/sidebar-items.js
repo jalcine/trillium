@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["crate_relative_path","a convenient helper macro to build a str relative to the crate root"]],"struct":[["StaticFileHandler","trillium handler to serve static files from the filesystem"]]});

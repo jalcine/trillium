@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Client","A client contains a Config and an optional connection pool and builds conns."],["Proxy","the proxy handler"]],"trait":[["Connector","Interface for runtime and tls adapters for the trillium client"]]});

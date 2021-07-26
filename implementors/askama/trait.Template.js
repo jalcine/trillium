@@ -1,0 +1,4 @@
+(function() {var implementors = {};
+implementors["trillium_aws_lambda_example"] = [{"text":"impl&lt;'a&gt; Template for <a class=\"struct\" href=\"trillium_aws_lambda_example/struct.HelloTemplate.html\" title=\"struct trillium_aws_lambda_example::HelloTemplate\">HelloTemplate</a>&lt;'a&gt;","synthetic":false,"types":["trillium_aws_lambda_example::HelloTemplate"]}];
+implementors["trillium_example"] = [{"text":"impl&lt;'a&gt; Template for <a class=\"struct\" href=\"trillium_example/struct.HelloTemplate.html\" title=\"struct trillium_example::HelloTemplate\">HelloTemplate</a>&lt;'a&gt;","synthetic":false,"types":["trillium_example::HelloTemplate"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

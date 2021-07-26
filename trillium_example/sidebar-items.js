@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["app",""],["main",""],["request_count",""],["router",""]],"struct":[["HelloTemplate",""]],"type":[["Proxy",""]]});

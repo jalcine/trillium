@@ -1,0 +1,1 @@
+initSidebarItems({"derive":[["Template",""]],"trait":[["AskamaConnExt","extends trillium conns with the ability to render askama templates"],["Template","Main `Template` trait; implementations are generally derived"]]});
