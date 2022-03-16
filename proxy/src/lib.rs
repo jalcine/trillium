@@ -37,6 +37,7 @@ pub struct Proxy<C: Connector> {
     client: Client<C>,
     pass_through_not_found: bool,
     halt: bool,
+    use_original_url: bool
 }
 
 impl<C: Connector> Proxy<C> {
@@ -66,6 +67,7 @@ impl<C: Connector> Proxy<C> {
             client: Client::new().with_default_pool(),
             pass_through_not_found: true,
             halt: true,
+            use_original_url: false
         }
     }
 
@@ -147,6 +149,17 @@ impl<C: Connector> Proxy<C> {
     }
 
     /**
+     Allows for the underlying proxied URL to be used as the _actual_ URL
+     in a request when passing through. This prevents the path from a
+     parent [`Conn`] from truncating the underlying path of the provided
+     URL.
+     */
+    pub fn use_original_url(mut self) -> Self {
+        self.use_original_url = true;
+        self
+    }
+
+    /**
     The default behavior for this handler is to halt the conn on any
     response other than a 404. If [`Proxy::proxy_not_found`] has been
     configured, the default behavior for all response statuses is to
@@ -174,7 +187,8 @@ struct UpstreamUpgrade<T>(Upgrade<T>);
 #[async_trait]
 impl<C: Connector> Handler for Proxy<C> {
     async fn run(&self, mut conn: Conn) -> Conn {
-        let request_url = conn_try!(self.target.clone().join(conn.path()), conn);
+        let request_url = if self.use_original_url {
+            self.target.clone() } else { conn_try!(self.target.clone().join(conn.path()), conn) };
 
         let mut client_conn = self.client.build_conn(conn.method(), request_url);
         client_conn.request_headers().extend(
