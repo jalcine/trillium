@@ -24,3 +24,4 @@ env_logger = "0.9.0"
 trillium-logger = { path = "../logger" }
 trillium-rustls = { path = "../rustls" }
 trillium-smol = { path = "../smol" }
+trillium-async-std = { path = "../async-std" }
