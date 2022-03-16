@@ -9,7 +9,7 @@ pub fn main() {
     env_logger::init();
     trillium_async_std::run((Logger::new(), |conn: Conn| async move {
         if conn.path().starts_with("/_proxy_") {
-    Proxy::new("https://httpbin.org/").run(conn).await
+    Proxy::new("https://httpbin.org/").use_original_url().run(conn).await.halt()
         } else { conn }
     }));
 }
